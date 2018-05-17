@@ -1,0 +1,9 @@
+{
+    "name": "rage/reviews-module",
+    "type": "streams-addon",
+    "autoload": {
+        "psr-4": {
+            "Rage\\ReviewsModule\\": "src/"
+        }
+    }
+}

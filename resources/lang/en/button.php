@@ -1,0 +1,5 @@
+<?php
+
+return [
+	'rates' => 'Rates'
+];

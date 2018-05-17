@@ -1,0 +1,20 @@
+<ul class="reviews list">
+{% for review in reviews %}
+    <li>
+        <ul class="ratings">
+            {% for assignment in review.fields %}
+                <li>
+                    <div class="row">
+                        <span class="rate-label">{{ assignment.object.label }}</span>
+                        {{ assignment.stars({'config':{'displayOnly': true, 'size': 'xs'}})|raw }}
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+        <div class="poster"><img class="img-fluid rounded" src="{{ review.poster.gravatar }}"/>{{ review.poster.display_name }}({{ review.poster.email }})</div>
+        <div class="message">
+            {{ review.message|raw }}
+        </div>
+    </li>
+{% endfor %}
+</ul>
